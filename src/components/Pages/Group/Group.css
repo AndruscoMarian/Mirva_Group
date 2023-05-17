@@ -1,0 +1,198 @@
+:root {
+    --green: #03bb40;
+    --border-radius: 50px;
+    --zinc-800: rgb(39 39 42);
+}
+.group{
+    background-image: url('../../../images/trees.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box{
+    width: 1200px;
+    height: auto;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 48px; 
+}
+
+.opacity{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.box-left, .box-right{
+    height: 650px;
+}
+
+.box-left{
+    width: 35%;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.box-right{
+    width: 65%;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.title, .logo{
+    color: var(--green);
+}
+.title{
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--zinc-800);
+}
+
+.title i{
+    display: none;
+}
+
+.btn-group{
+    border-bottom: 2px solid transparent;
+   
+}
+.btn-group:hover{
+    border-bottom: 2px solid var(--green);
+    transition: all 0.5s ease-out
+}
+
+
+.second-title{
+    border-bottom: 2px solid var(--green);
+}
+
+.btn-companies{
+    padding: 8px 14px 8px 14px;
+    border-radius: 5px;
+    color: var(--zinc-800);
+}
+
+.btn-companies:hover{
+    background-color: var(--green);
+    color: white;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.box-right > div > p{
+    max-height: 100%;
+    overflow-y: scroll;
+}
+.box-right > div > p::-webkit-scrollbar{
+    width: 4px;
+}
+.box-right > div > p::-webkit-scrollbar-thumb{
+     @apply bg-gray-100;
+}
+.box-right > div > p::-webkit-scrollbar-thumb:hover{
+    background-color: var(--green);
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    .box{
+        flex-direction: column;
+        width: 800px;
+    }
+
+    .box-left, .box-right{
+        width: 100%;
+    }
+
+    .box-left, .box-right > div{
+        height: auto;
+        padding: 24px;
+    }
+    .box-right > div > p{
+        height: 250px;
+    }
+    .box-left{
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    .box-right{
+        height: auto; 
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    .box-left > i{
+        display: none;
+    }
+
+    .title i{
+        display: inline;
+    }
+
+    .btn-group, .title{
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    .second-title{
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    .box-right > div > p{
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .title{
+        padding: 12px;
+        font-size: 16px;
+    }
+    .btn-group > div, 
+    .btn-group > i, 
+    .second-title,
+    .box-right > div > p,
+    .btn-companies,
+    .btn-companies > i{
+        font-size: 14px;
+    }
+    .btn-group,
+    .second-title,
+    .box-right > div > p{
+        padding: 6px;
+    }
+    .box-right > div > p{
+        overflow-y: scroll;
+    }
+    .box-left, .box-right > div{
+        height: auto;
+    }
+    .box-right > div{
+        height: 100%;
+    }
+    .box-right > div > p{
+        height: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .group, .opacity{
+        min-height: calc(48px + 250px + 450px);
+        height: calc( 400px + 55vh);
+    }
+    .box-left, .box-right > div{
+        padding: 16px;
+    }
+    .box-left{
+        height: 250px;
+    }
+    .box-right{
+        height: 450px;
+    }
+    .box{
+        margin: 24px; 
+    }
+}

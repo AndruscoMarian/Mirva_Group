@@ -1,0 +1,63 @@
+:root {
+    --green: #03bb40;
+  }
+
+.title2{
+    font-size: 32px;
+}
+
+.title1{ 
+    text-shadow:
+                    0 1px 0 rgb(10, 160, 10),
+                    0 2px 0 rgb(20, 200, 20),
+                    0 3px 0 rgb(30,220,30),
+                    0 4px 0 rgb(40,240,40),
+                    0 5px 0 rgb(100,255,100),
+                    0 6px 0 rgb(60,255,60),
+                    0 7px 0 rgb(70,255,70),
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 3px 5px rgba(0,0,0,.10),
+                    0 5px 10px rgba(0,0,0,.15),
+                    0 7px 10px rgba(0,0,0,.20),
+                    0 10px 15px rgba(0,0,0,.25);   
+    animation-duration: 1s;
+    animation-name: jump;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;   
+    font-size: 128px;
+    color: var( --green);
+    font-weight: 600;
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(0%);
+        
+    }
+  
+    to {
+        transform: translateY(-10%);
+    }
+  }
+
+  @media screen and (max-width: 688px) {
+    .title1{
+        font-size: 96px;
+    }
+
+    .title2{
+        font-size: 24px;
+    }
+}
+  @media screen and (max-width: 480px) {
+    .title1{
+        font-size: 64px;
+    }
+
+    .title2{
+        font-size: 16px;
+    }
+    .errorPage{
+     height: calc( 400px + 55vh);
+    }
+}

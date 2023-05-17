@@ -1,0 +1,52 @@
+:root {
+    --green: #03bb40;
+  }
+.about{
+    height: calc(35vh - 96px);
+}
+.about-home{
+    width: 90%;
+}
+.about-us{
+    border-color: var(--green);
+}
+
+@media screen and (max-width: 960px) {
+    .about-right, .about-left{
+        width: 100%;
+        border: none;
+    }
+    .about-left{
+        height: 35%;
+    }
+    .about-right{
+        font-size: 14px;
+        height: 65%;
+        width: 80%;
+        padding: 16px;
+    }
+    .about-us{
+        font-size: 14px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    
+}
+
+@media screen and (max-width: 688px) {
+    .about{
+        height: calc(40vh - 112px);
+    }
+    .about-right{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .about{
+        min-height: 400px;
+        height: calc(40vh - 144px);
+    }
+    .about-right{
+        width: 100%;
+    }
+}

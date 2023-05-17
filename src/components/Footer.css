@@ -1,0 +1,52 @@
+:root {
+    --green: #03bb40;
+    --white: rgb(243 244 246);
+}
+
+.footer-container {
+    max-width: 1300px;
+}
+.btn{
+  border-top: 2px solid transparent;
+}
+
+.btn:hover{
+  color: var(--white);
+  border-top: 2px solid var(--green);
+  transition: all 0.2s ease-in
+}
+
+@media screen and (max-width: 700px) {
+
+  .btn{
+      text-align: center;
+    }
+  .btns{
+      justify-content: center;
+  }
+  .btn:hover{
+    border-top: none;
+  }
+  .btn{
+    border-top: none;
+  }
+
+}
+
+@media screen and (max-width: 688px) {
+  .btn{
+    font-size: 14px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .btns, .footer{
+    height: 96px;
+  }
+  .footer{
+    top: calc(48px + 400px + 55vh);
+  }
+}
+
+
+

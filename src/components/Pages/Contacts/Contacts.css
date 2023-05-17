@@ -1,0 +1,16 @@
+
+.container{
+    width: 1300px;
+    height: auto;
+    max-height: 600px;
+    margin: 48px;
+}
+.contactPage{
+    z-index: 0;
+   }
+
+@media screen and (max-width: 480px) {
+    .contactPage{
+     height: calc( 400px + 55vh);
+    }
+}
